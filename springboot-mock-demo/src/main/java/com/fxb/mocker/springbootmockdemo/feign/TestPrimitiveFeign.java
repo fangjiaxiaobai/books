@@ -1,9 +1,9 @@
 package com.fxb.mocker.springbootmockdemo.feign;
 
-import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 
-//import com.fxb.mocker.annotation.Mocker;
+import com.fxb.mocker.annotation.Mocker;
 import com.fxb.mocker.springbootmockdemo.feign.fallback.TestPrimitiveFeignFallBack;
 
 /**
@@ -17,22 +17,22 @@ import com.fxb.mocker.springbootmockdemo.feign.fallback.TestPrimitiveFeignFallBa
 public interface TestPrimitiveFeign {
 
     @PostMapping("v1")
-//    @Mocker(autoGen = false)
+    @Mocker(autoGen = false)
     String v1();
 
 
     @PostMapping("v2")
-//    @Mocker(autoGen = false)
+    @Mocker(autoGen = false)
     byte v2();
 
 
     @PostMapping("v3")
-//    @Mocker(autoGen = false)
+    @Mocker(autoGen = false)
     Integer v3();
 
 
     @PostMapping("v4")
-//    @Mocker(autoGen = false)
+    @Mocker(autoGen = false)
     int v4();
 
 }

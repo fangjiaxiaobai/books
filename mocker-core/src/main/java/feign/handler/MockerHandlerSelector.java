@@ -11,8 +11,8 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fxb.mocker.annotation.Mocker;
 import com.fxb.mocker.utils.bean.NewBeanUtil;
+import com.fxb.mocker.utils.model.NewBeanModel;
 
-import feign.InvocationHandlerFactory;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -27,7 +27,8 @@ public class MockerHandlerSelector {
 
     private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
 
-    public static Object select(Method method) throws IOException, InstantiationException, IllegalAccessException, ClassNotFoundException {
+    public static Object select(
+            Method method) throws Exception {
 
         Mocker mocker = method.getAnnotation(Mocker.class);
         if (mocker != null) {
@@ -35,7 +36,7 @@ public class MockerHandlerSelector {
                 // 自动生成, 实现解析返回参数的方法
                 Class<?> returnType = method.getReturnType();
                 log.error("<Mocker> 执行Mock方法,生成 {} 对象,并为其自动填充数据", returnType.getCanonicalName());
-                return NewBeanUtil.newInstance(returnType);
+                return NewBeanUtil.newInstance(new NewBeanModel(method));
             } else if (!mocker.autoGen() || StringUtils.isNotEmpty(mocker.path())) {
                 // 读取resources目录下的文件,获取 方法对应的返回数据
                 if (StringUtils.isNotEmpty(mocker.path())) {

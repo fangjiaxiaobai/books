@@ -1,6 +1,8 @@
 package com.fxb.mocker.utils.bean;
 
 import java.lang.reflect.Field;
+import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Date;
@@ -53,6 +55,10 @@ public class BeanTypeUtil {
             return RandomUtil.randomBoolean();
         } else if (type == char.class || type == Character.class) {
             return RandomUtil.randomCharacter();
+        } else if (type == BigDecimal.class) {
+            return new BigDecimal(RandomUtil.randomInt());
+        }else if (type == BigInteger.class) {
+            return new BigDecimal(RandomUtil.randomInt());
         }
         // 时间
         else if (type == Date.class) {
@@ -82,6 +88,10 @@ public class BeanTypeUtil {
         } else if (tClass == LocalDateTime.class) {
             return true;
         } else if (tClass == String.class) {
+            return true;
+        } else if(tClass == BigDecimal.class){
+            return true;
+        }else if(tClass == BigInteger.class){
             return true;
         }
 

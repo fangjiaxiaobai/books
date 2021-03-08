@@ -47,6 +47,15 @@ public class RandomUtil {
         return NumberSource.getInstance().randomInt(1, 10);
     }
 
+    /**
+     * 生成1-3之间的数字
+     *
+     * @return 数字
+     */
+    public static int randomIntInThree() {
+        return NumberSource.getInstance().randomInt(1, 3);
+    }
+
     public static double randomDouble() {
         return NumberSource.getInstance().randomDouble(1D, 100D);
     }
@@ -91,6 +100,7 @@ public class RandomUtil {
         LocalDateTime dateTime = DateTimeSource.getInstance().randomFutureTime(1000);
         return dateTime.toLocalDate();
     }
+
     public static LocalDateTime randomLocalDateTime() {
         return DateTimeSource.getInstance().randomFutureTime(1000);
     }

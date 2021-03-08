@@ -1,0 +1,17 @@
+feign/MockerReflectiveFeign$Builder.class
+feign/MockerReflectiveFeign.class
+com/fxb/mocker/utils/model/INewBeanModel.class
+com/fxb/mocker/utils/bean/BeanReflectUtil.class
+com/fxb/mocker/utils/model/NewBeanModel.class
+com/fxb/mocker/utils/model/NewParamterBeanModel.class
+com/fxb/mocker/annotation/Mocker.class
+com/fxb/mocker/annotation/DataConfigurator.class
+com/fxb/mocker/utils/model/NewGenericBeanModel.class
+com/fxb/mocker/utils/bean/BeanTypeUtil.class
+feign/handler/MockerHandlerSelector.class
+com/fxb/mocker/utils/bean/TypeEnum.class
+com/fxb/mocker/utils/bean/BeanClassFileParser.class
+com/fxb/mocker/configuration/MockerAutoConfiguration.class
+com/fxb/mocker/utils/random/RandomUtil.class
+com/fxb/mocker/utils/model/NewFieldBeanModel.class
+com/fxb/mocker/utils/bean/NewBeanUtil.class

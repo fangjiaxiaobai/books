@@ -3,6 +3,7 @@ package com.fxb.mocker.configuration;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 import org.springframework.context.annotation.Scope;
 
 import feign.Feign;
@@ -18,6 +19,7 @@ import lombok.extern.slf4j.Slf4j;
  * @since 1.0.0
  */
 @Configuration
+@Profile( { "test","dev" })
 @Slf4j
 public class MockerAutoConfiguration {
 

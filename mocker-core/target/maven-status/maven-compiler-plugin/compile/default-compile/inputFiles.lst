@@ -1,0 +1,16 @@
+/Users/bjhl/fxb_applicaton/fxb_learn/learn_java/mocker/mocker-core/src/main/java/feign/MockerReflectiveFeign.java
+/Users/bjhl/fxb_applicaton/fxb_learn/learn_java/mocker/mocker-core/src/main/java/com/fxb/mocker/utils/model/NewBeanModel.java
+/Users/bjhl/fxb_applicaton/fxb_learn/learn_java/mocker/mocker-core/src/main/java/com/fxb/mocker/utils/random/RandomUtil.java
+/Users/bjhl/fxb_applicaton/fxb_learn/learn_java/mocker/mocker-core/src/main/java/feign/handler/MockerHandlerSelector.java
+/Users/bjhl/fxb_applicaton/fxb_learn/learn_java/mocker/mocker-core/src/main/java/com/fxb/mocker/utils/bean/BeanClassFileParser.java
+/Users/bjhl/fxb_applicaton/fxb_learn/learn_java/mocker/mocker-core/src/main/java/com/fxb/mocker/utils/model/NewGenericBeanModel.java
+/Users/bjhl/fxb_applicaton/fxb_learn/learn_java/mocker/mocker-core/src/main/java/com/fxb/mocker/utils/bean/BeanReflectUtil.java
+/Users/bjhl/fxb_applicaton/fxb_learn/learn_java/mocker/mocker-core/src/main/java/com/fxb/mocker/annotation/DataConfigurator.java
+/Users/bjhl/fxb_applicaton/fxb_learn/learn_java/mocker/mocker-core/src/main/java/com/fxb/mocker/annotation/Mocker.java
+/Users/bjhl/fxb_applicaton/fxb_learn/learn_java/mocker/mocker-core/src/main/java/com/fxb/mocker/utils/bean/BeanTypeUtil.java
+/Users/bjhl/fxb_applicaton/fxb_learn/learn_java/mocker/mocker-core/src/main/java/com/fxb/mocker/utils/bean/TypeEnum.java
+/Users/bjhl/fxb_applicaton/fxb_learn/learn_java/mocker/mocker-core/src/main/java/com/fxb/mocker/utils/bean/NewBeanUtil.java
+/Users/bjhl/fxb_applicaton/fxb_learn/learn_java/mocker/mocker-core/src/main/java/com/fxb/mocker/utils/model/NewFieldBeanModel.java
+/Users/bjhl/fxb_applicaton/fxb_learn/learn_java/mocker/mocker-core/src/main/java/com/fxb/mocker/configuration/MockerAutoConfiguration.java
+/Users/bjhl/fxb_applicaton/fxb_learn/learn_java/mocker/mocker-core/src/main/java/com/fxb/mocker/utils/model/INewBeanModel.java
+/Users/bjhl/fxb_applicaton/fxb_learn/learn_java/mocker/mocker-core/src/main/java/com/fxb/mocker/utils/model/NewParamterBeanModel.java

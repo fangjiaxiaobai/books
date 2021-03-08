@@ -1,7 +1,5 @@
 package com.fxb.mocker.springbootmockdemo.vo;
 
-import javax.annotation.sql.DataSourceDefinition;
-
 import lombok.Data;
 
 /**
@@ -13,6 +11,14 @@ import lombok.Data;
  */
 @Data
 public class SimpleObject {
+
+    private static final String ddd = "";
+
+    private static int aaa = 0;
+
+    private final double ccc = 0D;
+
+    private final String bbb;
 
     private String value1;
 

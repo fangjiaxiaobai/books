@@ -13,6 +13,15 @@
         提供 数据mock,熔断,降级 功能
     ]]></description>
 
+    <properties>
+        <lombok.version>1.18.18</lombok.version>
+        <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
+        <maven-javadoc-plugin.version>3.2.0</maven-javadoc-plugin.version>
+        <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
+        <maven-war-plugin.version>3.3.1</maven-war-plugin.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
 
     <modules>
         <module>springboot-mock-demo</module>
@@ -35,7 +44,7 @@
             <dependency>
                 <groupId>io.github.openfeign</groupId>
                 <artifactId>feign-core</artifactId>
-                <version>10.10.1</version>
+                <version>9.5.0</version>
                 <scope>compile</scope>
             </dependency>
 
@@ -66,4 +75,14 @@
         </dependencies>
     </dependencyManagement>
 
+    <distributionManagement>
+        <repository>
+            <id>Baijia_Release</id>
+            <url>https://nexus.baijia.com/repository/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>Baijia_Snapshot</id>
+            <url>https://nexus.baijia.com/repository/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>

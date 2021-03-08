@@ -27,9 +27,8 @@ public class MockerReflectiveFeign extends ReflectiveFeign {
 
     private final InvocationHandlerFactory factory;
 
-    MockerReflectiveFeign(ParseHandlersByName targetToHandlersByName, InvocationHandlerFactory factory,
-            QueryMapEncoder queryMapEncoder) {
-        super(targetToHandlersByName, factory, queryMapEncoder);
+    MockerReflectiveFeign(ParseHandlersByName targetToHandlersByName, InvocationHandlerFactory factory) {
+        super(targetToHandlersByName, factory);
         this.targetToHandlersByName = targetToHandlersByName;
         this.factory = factory;
     }
@@ -50,7 +49,6 @@ public class MockerReflectiveFeign extends ReflectiveFeign {
                 methodToHandler.put(method, handler);
             } else {
                 if (annotation != null) {
-                    // todo 修改 nameToHandler.get(Feign.configKey(target.type(), method)) 这里
                     InvocationHandlerFactory.MethodHandler methodHandler = argv -> {
                         // 实现解析返回参数的方法
                         Class<?> returnType = method.getReturnType();
@@ -99,10 +97,7 @@ public class MockerReflectiveFeign extends ReflectiveFeign {
                 factory.setAccessible(true);
                 InvocationHandlerFactory invocationHandlerFactory = (InvocationHandlerFactory) factory.get(
                         reflectiveFeign);
-                Field queryMapEncoderField = aClass.getDeclaredField("queryMapEncoder");
-                queryMapEncoderField.setAccessible(true);
-                QueryMapEncoder queryMapEncoder = (QueryMapEncoder) queryMapEncoderField.get(reflectiveFeign);
-                return new MockerReflectiveFeign(parseHandlersByName, invocationHandlerFactory, queryMapEncoder);
+                return new MockerReflectiveFeign(parseHandlersByName, invocationHandlerFactory);
             }
             return build;
         }
